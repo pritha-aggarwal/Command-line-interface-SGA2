@@ -18,10 +18,10 @@ Write a C program demonstrating signal handling.
 #include <signal.h>
 #include <sys/types.h>
 
-// Global flag to control the parent's loop
+//Global flag to control the parent's loop
 volatile sig_atomic_t keep_running = 1;
 
-// Handler for SIGTERM (Termination signal)
+//Handler for SIGTERM (Termination signal)
 void handle_sigterm(int sig) {
     printf("\n[Parent] Received SIGTERM (Signal %d). Preparing to wrap up...\n", sig);
 }
